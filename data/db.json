@@ -1,0 +1,73 @@
+{
+    "players": [{
+            "id": 1,
+            "firstname": "d'angelo",
+            "nickname": "russel",
+            "role": "guard",
+            "image": "dlo.webp"
+        },
+        {
+            "id": 2,
+            "firstname": "jarred",
+            "nickname": "vanderbilt",
+            "role": "forward",
+            "image": "vando.webp"
+        },
+        {
+            "id": 3,
+            "firstname": "anthony",
+            "nickname": "davis",
+            "role": "forward-center",
+            "image": "davis.webp"
+        },
+        {
+            "id": 10,
+            "firstname": "max",
+            "nickname": "christie",
+            "role": "forward",
+            "image": "max.webp"
+        },
+        {
+            "id": 15,
+            "firstname": "austin",
+            "nickname": "reaves",
+            "role": "guard",
+            "image": "him.webp"
+        },
+        {
+            "id": 20,
+            "firstname": "scotty",
+            "nickname": "pippen jr.",
+            "role": "guard",
+            "image": "scotty.webp"
+        },
+        {
+            "id": 23,
+            "firstname": "lebron",
+            "nickname": "james",
+            "role": "forward",
+            "image": "lbj.webp"
+        },
+        {
+            "id": 28,
+            "firstname": "rui",
+            "nickname": "hachimura",
+            "role": "forward",
+            "image": "rui.webp"
+        },
+        {
+            "id": 36,
+            "firstname": "christian",
+            "nickname": "wood",
+            "role": "forward",
+            "image": "wood.webp"
+        },
+        {
+            "id": 35,
+            "firstname": "wenyen",
+            "nickname": "gabriel",
+            "role": "forward",
+            "image": "gabriel.webp"
+        }
+    ]
+}

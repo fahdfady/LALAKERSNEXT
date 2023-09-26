@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-moz-selection {
+  background: rgba(136, 0, 247, 0.5490196078);
+  color: #fff;
+}
+::selection {
+  background: rgba(136, 0, 247, 0.5490196078);
+  color: #fff;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(12, 8, 0);
+  background: linear-gradient(90deg, rgb(12, 8, 0) 0%, rgb(17, 17, 17) 50%, rgb(8, 0, 7) 100%);
+}
+
+section {
+  @apply w-full md:py-12 py-6;
+}
+main section:first-of-type {
+  @apply pt-0 mt-[7rem];
+}
+main section.banner {
+  @apply p-0 m-0;
+}
+main section.banner .banner-container {
+  background: url("../public/banner.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.section-title {
+  @apply w-full p-4 mb-6 flex flex-col justify-center items-center gap-3;
+}
+.section-title h2 {
+  @apply md:text-3xl uppercase;
+}
+.section-title p {
+  @apply md:text-sm text-[#adadad];
+}
+
+.player img {
+  filter: saturate(0) drop-shadow(2px 0px 10px black);
+}
+.player:hover, .player:focus {
+  @apply bg-[#2f2300] border-yellow-400;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.player:hover img, .player:focus img {
+  filter: saturate(1) drop-shadow(2px 0px 10px black);
+}
+.player:hover .layer, .player:focus .layer {
+  opacity: 1;
+}/*# sourceMappingURL=globals.css.map */
