@@ -3,10 +3,11 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { signOut } from "firebase/auth";
 import { UserAuth } from "../context/AuthContext";
+import { useProtectedRoute } from '../context/ProtectedRoute';
 
 export default function Register() {
-    const { user, googleSignIn, LogOut } = UserAuth();
-    const [loading, setLoading] = useState(true);
+    const { user, googleSignIn } = UserAuth();
+    useProtectedRoute();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

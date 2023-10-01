@@ -1,43 +1,50 @@
 'use client'
-
-import { collection, doc, getDoc } from "firebase/firestore";
-import { auth, db } from "../../firebase";
+import { doc, getDoc } from "firebase/firestore";
+// import { auth, db } from "../../firebase";
 import { UserAuth } from "../../context/AuthContext";
 import { useEffect, useState } from "react";
 // import { getUserData } from "@/app/context/GetUserContext";
 // import { docSnap } from "@/app/context/GetUserContext";
-let docSnap = "";
-export const getUserData = async () => {
-
-  // if (docSnap.exists()) {
-  //     console.log("Document data:", docSnap.data());
-  // } else {
-  //     // docSnap.data() will be undefined in this case
-  //     console.log("No such document!");
-  // }
-  const docRef = await getDoc(doc(db, "users", 'fahd.fady212@gmail.com'));
-  docSnap = docRef;
-  console.log(docSnap)
-}
+import { useParams } from 'next/navigation'
+import { db } from "@/app/firebase";
+import Image from "next/image";
+import { useProtectedRoute } from "@/app/context/ProtectedRoute";
 
 export default function Profile() {
-  const { user } = UserAuth();
-  useEffect(() => {
-    const checkAuthentication = () => {
-      new Promise((resolve) => setTimeout(resolve, 50))
-    }
-    checkAuthentication()
-  }, [user]);
+  const params = useParams();
+  const [userData, setUserData] = useState("");
+  useProtectedRoute();
+
+  if (!userData) {
 
 
-  getUserData()
-  console.log(docSnap)
+    const docSnap = getDoc(doc(db, "users", params?.id)).then(docSnap => {
+      if (docSnap.exists()) {
+        setUserData(docSnap.data());
+      } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+        setUserData("No such document!")
+      }
+    });
+  }
+  else {
+    console.log("حرااااااااااااااااااااام")
+  }
+
 
   return (
     <section>
-      <div className="user-profile text-center max-w-6xl mx-auto flex flex-col justify-center items-center">
-        {/* <h1 className="md:text-5xl">{docSnap}</h1> */}
+      {userData ? <div className="user-profile text-center max-w-6xl mx-auto flex flex-col justify-center items-center gap-6">
+
+        <Image src={userData?.photo} width={120} height={120} alt="user" className="rounded-full" />
+
+        <h1 className="md:text-4xl">{userData?.name}</h1>
+
+        {/* <p className="md:text-2xl">A laker since <span>userData?.dataJoined</span></p> */}
       </div>
+        : <></>
+      }
     </section>
   )
 }

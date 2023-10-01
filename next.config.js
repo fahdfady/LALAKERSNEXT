@@ -5,9 +5,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'assets.vercel.com',
+                hostname: 'lh3.googleusercontent.com',
                 port: '',
-                pathname: 'image/upload/**'
+                pathname: '/**'
             }
         ]
     }

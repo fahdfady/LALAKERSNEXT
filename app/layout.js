@@ -3,6 +3,8 @@ import Navbar from './components/navbar'
 import './globals.css'
 import { Rubik } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -21,11 +23,13 @@ export default function RootLayout({ children }) {
 
       <body className={rubik.className}>
         <AuthContextProvider>
-          <Navbar />
+          <Suspense fallback={<Loading />}>
+            <Navbar />
 
-          <main>
-            {children}
-          </main>
+            <main>
+              {children}
+            </main>
+          </Suspense>
         </AuthContextProvider>
       </body>
     </html>
