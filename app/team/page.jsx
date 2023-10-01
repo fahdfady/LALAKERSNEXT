@@ -1,7 +1,7 @@
 import Player from "../components/player";
 
 const fetchPlayerData = async () => {
-    const res = await fetch('http://localhost:8000/players');
+    const res = await fetch('https://6519c76d340309952f0cb6ee.mockapi.io/players');
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');
