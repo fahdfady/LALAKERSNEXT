@@ -6,11 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint", 
+    "lint": "next lint",
     "json": "json-server --watch ./data/db.json --port 8000"
   },
   "dependencies": {
     "autoprefixer": "10.4.16",
+    "encoding": "^0.1.13",
     "firebase": "^10.4.0",
     "next": "13.5.2",
     "postcss": "8.4.30",
