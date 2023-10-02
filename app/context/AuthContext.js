@@ -15,7 +15,11 @@ const storeInDB = async (Data) => {
                 name: Data?.displayName,
                 photo: Data?.photoURL,
                 verified: Data?.emailVerified,
-                isAnonymous: Data?.isAnonymous
+                isAnonymous: Data?.isAnonymous,
+                createdAt: Data?.metadata?.createdAt,
+                creationTime: Data?.metadata?.creationTime,
+                lastLoginAt: Data?.metadata?.lastLoginAt,
+                lastSignInTime: Data?.metadata?.lastSignInTime
             });
 
             console.log("Document written with ID: ", Data?.uid);
