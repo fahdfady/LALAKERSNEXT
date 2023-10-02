@@ -1,3 +1,6 @@
+
+'use client'
+
 import Player from "../components/player";
 
 const fetchPlayerData = async () => {
