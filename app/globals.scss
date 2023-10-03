@@ -48,7 +48,16 @@ section{
 }
 
 .section-title{
-  @apply w-full p-4 mb-6 flex flex-col justify-center items-center gap-3;
+  @apply w-full p-4 mb-6 flex flex-col justify-center items-center gap-3 text-center;
+  article & {
+      @apply mb-0;
+        h2{
+          @apply md:text-3xl text-lg;
+        }
+    }
+  h1{
+    @apply md:text-4xl uppercase;
+  }
   h2{
     @apply md:text-3xl uppercase;
   }
@@ -71,5 +80,24 @@ section{
     .layer{
       opacity: 1;
     }
+  }
+}
+
+article{
+  &:hover,&:focus{
+    img{
+      @apply saturate-100 border-yellow-300;
+    }
+    .section-title{
+      h2{
+        @apply text-yellow-300;        
+      }
+    }
+  }
+  img{
+    @apply saturate-0 shadow-md duration-150 ease-in-out border border-transparent rounded-lg;
+  }
+  .section-title h2{
+    @apply duration-150 ease-in-out;
   }
 }

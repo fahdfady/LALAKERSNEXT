@@ -23,13 +23,10 @@ export default function Profile() {
         setUserData(docSnap.data());
       } else {
         // docSnap.data() will be undefined in this case
-        console.log("No such document!");
-        setUserData("No such document!")
       }
     });
   }
   else {
-    console.log("حرااااااااااااااااااااام")
   }
 
 

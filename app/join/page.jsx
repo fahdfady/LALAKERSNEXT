@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { signOut } from "firebase/auth";
@@ -33,7 +34,7 @@ export default function Register() {
                         src="/logo.png" // the logo of the Los Angeles Lakers[^1^][1]
                         alt="Lakers Logo"
                         width={100}
-                        height={100}
+                        height={64}
                     />
                     <h1 className="text-3xl font-bold text-yellow-400 ml-4">Join us, Lakers Fan</h1>
                 </div>
@@ -115,7 +116,7 @@ export default function Register() {
                         type="button"
                         onClick={handleSubmitGoogle}
                         className="flex justify-center items-center gap-6 mt-6 w-full p-4 bg-black text-white font-bold border-solid border-black border-2 rounded-md duration-150 hover:bg-transparent hover:text-black"
-                    ><Image src={"/googlelogo.png"} width={30} height={30} />Register with google</button>
+                    ><Image src={"/googlelogo.png"} width={30} height={30} />login with google</button>
                 </form>
             </div>
         </div>
