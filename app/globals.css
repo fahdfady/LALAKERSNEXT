@@ -60,7 +60,7 @@ article .section-title h2 {
   @apply md:text-3xl uppercase;
 }
 .section-title p {
-  @apply md:text-sm text-[#adadad];
+  @apply md:text-sm text-xs text-[#adadad];
 }
 
 .player img {
