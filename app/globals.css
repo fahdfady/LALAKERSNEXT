@@ -45,7 +45,16 @@ main section.banner .banner-container {
 }
 
 .section-title {
-  @apply w-full p-4 mb-6 flex flex-col justify-center items-center gap-3;
+  @apply w-full p-4 mb-6 flex flex-col justify-center items-center gap-3 text-center;
+}
+article .section-title {
+  @apply mb-0;
+}
+article .section-title h2 {
+  @apply md:text-3xl text-lg;
+}
+.section-title h1 {
+  @apply md:text-4xl uppercase;
 }
 .section-title h2 {
   @apply md:text-3xl uppercase;
@@ -67,4 +76,17 @@ main section.banner .banner-container {
 }
 .player:hover .layer, .player:focus .layer {
   opacity: 1;
+}
+
+article:hover img, article:focus img {
+  @apply saturate-100 border-yellow-300;
+}
+article:hover .section-title h2, article:focus .section-title h2 {
+  @apply text-yellow-300;
+}
+article img {
+  @apply saturate-0 shadow-md duration-150 ease-in-out border border-transparent rounded-lg;
+}
+article .section-title h2 {
+  @apply duration-150 ease-in-out;
 }/*# sourceMappingURL=globals.css.map */
