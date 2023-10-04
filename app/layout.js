@@ -5,6 +5,7 @@ import { Rubik } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
 import { Suspense } from 'react'
 import Loading from './loading'
+import Footer from './components/footer'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -29,6 +30,8 @@ export default function RootLayout({ children }) {
             <main>
               {children}
             </main>
+
+            <Footer />
           </Suspense>
         </AuthContextProvider>
 

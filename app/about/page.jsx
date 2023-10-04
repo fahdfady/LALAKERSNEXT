@@ -44,7 +44,7 @@ Lakers fired Vogel, hired Ham, reached conference finals, lost to Nuggets. James
             <hr className="w-6/12 mx-auto my-4 text-gray-400" />
             {seasons && seasons.map((season) => (
                 <>
-                    <article className="max-w-screen-xl mx-auto text-start" tabIndex={0}>
+                    <article className="max-w-screen-xl mx-auto text-start" tabIndex={0} key={season?.id}>
                         <div className="section-title">
                             <h2 className="">the {season?.year} season</h2>
                             <p>{season?.title}</p>

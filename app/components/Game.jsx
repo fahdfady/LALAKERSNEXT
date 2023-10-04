@@ -9,10 +9,10 @@ export default function Game() {
 
             <div className="widget flex flex-col justify-evenly items-center text-center sm:flex-row md:px-5">
                 <div className="team w-[220px] flex flex-col justify-center items-center gap-3 md:order-none">
-                    <Image src="/logo.png" width={180} height={115} />
+                    <Image src="/logo.png" width={150} height={96} />
                     <h3 className="uppercase text-xl">los angeles lakers</h3>
                 </div>
-                <div className="w-[300px] flex flex-col justify-center items-center gap-5 md:order-5">
+                <div className="w-[300px] flex flex-col justify-center items-center gap-1 md:gap-5 md:order-5 py-6 sm:py-0">
                     <h3 className="match-type text-stone-400">
                         FINAL
                     </h3>
@@ -27,7 +27,7 @@ export default function Game() {
                     </div>
                 </div>
                 <div className="team w-[220px] flex flex-col justify-center items-center gap-3 md:order-10">
-                    <Image src="/gswlogo.png" width={120} height={120} />
+                    <Image src="/gswlogo.png" width={100} height={100} />
                     <h3 className="uppercase text-xl">golden state warriors</h3>
                 </div>
             </div>
