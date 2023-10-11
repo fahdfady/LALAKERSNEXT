@@ -27,8 +27,8 @@ export default function Register() {
         }
     }
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="max-w-lg w-full px-8 py-12 bg-stone-100 rounded-lg shadow-[0px_0px_12px_0px_#fff]">
+        <section className="flex items-center justify-center">
+            <div className="max-w-lg w-full px-8 py-12 bg-transparent rounded-lg shadow-[0px_0px_12px_0px_#000]">
                 <div className="flex flex-col items-center justify-center">
                     <Image
                         src="/logo.png" // the logo of the Los Angeles Lakers[^1^][1]
@@ -38,7 +38,7 @@ export default function Register() {
                     />
                     <h1 className="text-3xl font-bold text-yellow-400 ml-4">Join us, Lakers Fan</h1>
                 </div>
-                <p className="mt-4 text-gray-600 text-center">
+                <p className="mt-4 text-gray-300 text-center">
                     A fan website built by {''} <a
                         href="https://fahddev.vercel.app/"
                         target="_blank"
@@ -62,7 +62,7 @@ export default function Register() {
                         TailwindCSS
                     </a>
                 </p>
-
+                <p className="my-5 text-purple-300 text-center">Kindly, use 'Login with google' option only. As the Email-Password Login isn't working properly at this time</p>
                 <form className="mt-8 text-stone-900">
                     <div>
                         <label htmlFor="email" className="sr-only">
@@ -108,17 +108,15 @@ export default function Register() {
                     </div>
                     <button
                         type="submit"
-                        className="mt-6 w-full px-4 py-2 bg-yellow-500 text-white font-bold rounded-md hover:bg-yellow-500"
-                    >
-                        Register
-                    </button>
+                        className="mt-6 w-full px-4 py-2 bg-yellow-400 text-white font-bold rounded-md duration-100 hover:bg-yellow-500"
+                    >Register</button>
                     <button
                         type="button"
                         onClick={handleSubmitGoogle}
-                        className="flex justify-center items-center gap-6 mt-6 w-full p-4 bg-black text-white font-bold border-solid border-black border-2 rounded-md duration-150 hover:bg-transparent hover:text-black"
+                        className="flex justify-center items-center gap-6 mt-6 w-full p-4 bg-black text-white font-bold border-solid border-black border-2 rounded-md duration-150 hover:bg-transparent"
                     ><Image src={"/googlelogo.png"} width={30} height={30} />login with google</button>
                 </form>
             </div>
-        </div>
+        </section>
     )
 }

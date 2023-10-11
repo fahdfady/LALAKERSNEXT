@@ -25,7 +25,7 @@
 }
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(12, 8, 0);
+  background: #0c0800;
   background: linear-gradient(90deg, rgb(12, 8, 0) 0%, rgb(17, 17, 17) 50%, rgb(8, 0, 7) 100%);
 }
 
@@ -33,7 +33,7 @@ section {
   @apply w-full md:py-12 py-6;
 }
 main section:first-of-type {
-  @apply pt-0 mt-[7rem];
+  @apply pt-0 mt-[7.2rem];
 }
 main section.banner {
   @apply p-0 m-0;
@@ -60,7 +60,7 @@ article .section-title h2 {
   @apply md:text-3xl uppercase;
 }
 .section-title p {
-  @apply md:text-sm text-[#adadad];
+  @apply md:text-sm text-xs text-[#adadad];
 }
 
 .player img {

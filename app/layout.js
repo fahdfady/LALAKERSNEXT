@@ -5,6 +5,7 @@ import { Rubik } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
 import { Suspense } from 'react'
 import Loading from './loading'
+import Footer from './components/footer'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -23,12 +24,14 @@ export default function RootLayout({ children }) {
 
       <body className={rubik.className}>
         <AuthContextProvider>
+          <Navbar />
           <Suspense fallback={<Loading />}>
-            <Navbar />
 
-            <main>
+            <main className="min-h-screen">
               {children}
             </main>
+
+            <Footer />
           </Suspense>
         </AuthContextProvider>
 
